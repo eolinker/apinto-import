@@ -1,2 +1,2 @@
-# apinto-worker-import
-a tool for importing worker config to apinto
+# apinto-import
+a tool for importing config to apinto
