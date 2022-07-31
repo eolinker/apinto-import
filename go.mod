@@ -3,7 +3,7 @@ module github.com/eolinker/apinto-import
 go 1.18
 
 require (
-	github.com/eolinker/eosc v0.5.2
+	github.com/eolinker/eosc v0.6.0
 	github.com/urfave/cli/v2 v2.11.1
 )
 
