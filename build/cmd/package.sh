@@ -16,6 +16,6 @@ then
     exit 1
   fi
 fi
-packageApp apinto $VERSION
+packageApp apinto-import $VERSION
 
 cd ${ORGPATH}
