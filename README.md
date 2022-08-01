@@ -4,7 +4,22 @@
 - 升级原因：
   - 由于早期选型时对etcd的源码调研不够完整，旧版本只使用了etcd的raft协议实现，eosc重新实现了kv的处理，该实现的可靠性、性能未经证明
   - 本次升级抛弃了eosc自己实现的kv，使用etcd内置的kv实现，该模型及代码经历过海量用户长时间、大规模的使用，可靠性、性能方面具有一定保证，并且方便以后同步升级到etcd的新版本
-## 导入流程
+  
+## 快速使用
+1、下载并解压导入程序
+```
+wget https://github.com/eolinker/apinto-import/releases/download/v1.0.0/apinto-import-v1.0.0.linux.x64.tar.gz && tar -zxvf apinto-import-v1.0.0.linux.x64.tar.gz && cd apinto-import
+```
+2、导入配置数据
+```
+./apinto-import import -path "{压缩包名称}" -apinto-address {apinto访问地址}
+```
+示例：
+```
+./apinto-import import -path "export_2022-07-29 161215.zip" -apinto-address http://127.0.0.1:9400
+```
+
+## 升级流程
 ### 单节点升级
 1、将旧数据导出，浏览器访问接口：{ip}:{port}/export
 
