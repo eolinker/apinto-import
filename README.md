@@ -1,6 +1,6 @@
 # apinto-import
 ## 导入配置
-- 当前只考虑未对接etcd的版本（v0.6.4）升级到对接etcd的版本（v0.7.0）
+- 当前只考虑未对接etcd的版本（v0.6.4）升级到对接etcd的版本（v0.7.0及其以上）
 - 升级原因：
   - 由于早期选型时对etcd的源码调研不够完整，旧版本只使用了etcd的raft协议实现，eosc重新实现了kv的处理，该实现的可靠性、性能未经证明
   - 本次升级抛弃了eosc自己实现的kv，使用etcd内置的kv实现，该模型及代码经历过海量用户长时间、大规模的使用，可靠性、性能方面具有一定保证，并且方便以后同步升级到etcd的新版本
@@ -27,7 +27,7 @@ wget https://github.com/eolinker/apinto-import/releases/download/v1.0.0/apinto-i
 ```
 ./apinto stop
 ```
-3、下载并解压新版本节点
+3、下载并解压新版本节点（以v0.7.0为例）
  ```
 cd {存放目录} && wget https://github.com/eolinker/apinto/releases/download/v0.7.0/apinto-v0.7.0.linux.x64.tar.gz && tar -zxvf apinto-v0.7.0.linux.x64.tar.gz && cd apinto
 ```
